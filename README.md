@@ -1,1 +1,3 @@
-In this part of the program we will be learning about the basics of python programming.
+In this directory we will be learning all about higher level programming languages. 
+
+The first higher level programming language we will be learning will be python.
