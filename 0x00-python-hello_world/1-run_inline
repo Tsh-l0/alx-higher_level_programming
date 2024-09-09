@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Run the code stored in PYCODE
+python3 -c "$PYCODE"
