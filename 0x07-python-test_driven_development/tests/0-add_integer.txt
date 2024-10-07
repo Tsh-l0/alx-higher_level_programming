@@ -1,0 +1,48 @@
+Test case for 0-add_integer function
+====================================
+The function returns the sum of 2 ints
+
+import function
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Returning the sum of 2 positive integers:
+	>>> add_integer(5, 4)
+	9
+
+Returning the sum of a positive and negative integer:
+	>>> add_integer(3, -6)
+	-3
+
+Returning the sum of two negative integers:
+	>>> add_integer(-4, -3)
+	-7
+
+Returning the sum of 2 positive floats:
+	>>> add_integer(2.5, 2.5)
+	5
+
+Returning the sum of a positive float and a negative integer:
+	>>> add_integer(5.5, -3)
+	2.5
+
+Returning the sum of two negative floats:
+	>>> add_integer(-3.5, -2.5)
+	6
+
+Return the sum of an integer and a string:
+	>>> add_integer(6, "python")
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
+
+Return the sum of a float and a string:
+	>>> add_integer("python", 3.5)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+Return the sum when no arguments are passed:
+	>>> add_integer("python", "school")
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
