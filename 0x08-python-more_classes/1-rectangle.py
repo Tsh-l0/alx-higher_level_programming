@@ -5,7 +5,7 @@ Defines the class, Rectangle
 
 
 class Rectangle:
-    """ Empty class, Rectangle""" 
+    """ Empty class, Rectangle"""
     def __init__(self, width=0, height=0):
         """ Initializes the class, Rectangle
         Args:
