@@ -19,15 +19,15 @@ Returning the sum of two negative integers:
 
 Returning the sum of 2 positive floats:
 	>>> add_integer(2.5, 2.5)
-	5
+	4
 
 Returning the sum of a positive float and a negative integer:
 	>>> add_integer(5.5, -3)
-	2.5
+	2
 
 Returning the sum of two negative floats:
 	>>> add_integer(-3.5, -2.5)
-	6
+	-5
 
 Return the sum of an integer and a string:
 	>>> add_integer(6, "python")
@@ -46,3 +46,9 @@ Return the sum when no arguments are passed:
 	Traceback (most recent call last):
 		...
 	TypeError: a must be an integer
+
+Return the sum when no arguments are passed:
+        >>> add_integer(None)
+        Traceback (most recent call last):
+                ...
+        TypeError: a must be an integer
