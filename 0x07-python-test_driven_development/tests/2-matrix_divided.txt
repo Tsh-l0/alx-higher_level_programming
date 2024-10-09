@@ -1,0 +1,27 @@
+Test case for 2-matrix_divided.py
+=================================
+This function divides all elements of a matrix
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+>>> matrix_divided([[2, 4, 6], [8, 10, 12]], 3)
+[[0.67, 1.33, 2.0], [2.67, 3.33, 4.0]]
+
+>>> matrix = [[3, 6, 9],[4, 8, 12]]
+>>> print(matrix_divided(matrix, 3))
+[[1.0, 2.0, 3.0], [1.33, 2.67, 4.0]]
+
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> print(matrix_divided(matrix, 'python'))
+Traceback (most recent call last):
+TypeError: div must be a number
+
+>>> matrix = [[5, 10, 15], [6, 12, 18]]
+>>> print(matrix_divided(matrix, 0))
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+>>> matrix = [[7], [8, 16, 24]]
+>>> print(matrix_divided(matrix, 2))
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
