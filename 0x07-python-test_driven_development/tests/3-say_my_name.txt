@@ -1,0 +1,19 @@
+Test cases for 3-say_my_name.py
+===============================
+A function that prints My name is <first name> <last name>
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+>>> say_my_name("John", "Motsamai")
+My name is John Motsamai
+
+>>> say_my_name("Tsholo", "Molefe")
+My name is Tsholo Molefe
+
+>>> say_my_name(1995, "Paula")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name(None)
+Traceback (most recent call last):
+TypeError: first_name must be a string
