@@ -1,0 +1,23 @@
+Test case for 5-text_indentation.py
+===================================
+A function that prints a text with 2 new lines after each of these characters: ., ? and :
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("python?")
+python?
+<BLANKLINE>
+
+>>> text_indentation("  python is cool.")
+python is cool.
+<BLANKLINE>
+
+>>> text_indentation("python.  ")
+python.
+<BLANKLINE>
+
+>>> text_indentation("  python is.  so cool.  ")
+python is.
+<BLANKLINE>
+so cool.
+<BLANKLINE>
