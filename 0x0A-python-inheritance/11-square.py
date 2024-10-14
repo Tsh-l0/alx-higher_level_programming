@@ -2,8 +2,55 @@
 """
 a class, Square, that inherits from Rectangle
 """
-Rectangle = __import__('9-rectangle').Rectangle
 
+
+class BaseGeometry:
+    """
+    A class with a public nstance method
+    """
+    def area(self):
+        """
+        Raises:
+            an exception with a message when called
+        """
+        raise Exception("area() is not implemented")
+
+    def integer_validator(self, name, value):
+        """
+        Validates value
+        Raises:
+            TypeError: If value != int
+            ValueError: value <= 0
+        """
+        if type(value) != int:
+            raise TypeError("{} must be an integer".format(name))
+        if value <= 0:
+            raise ValueError("{} must be greater than -".format(name))
+
+class Rectangle(BaseGeometry):
+    """
+    Class, Rectangle, inherited from BaseGeometry
+    """
+    def __init__(self, width, height):
+        """
+        Initialization of the Rectangle using dimensions
+        """
+        self.integer_validator("width", width)
+        self.__width = width
+        self.integer_validator("height", height)
+        self.__height = height
+
+    def area(self):
+        """
+        Returns the area of class, Rectangle
+        """
+        return self.__width * self.__height
+
+    def __str__(self):
+        """
+        Description of class, rectangle
+        """
+        return f"[Rectangle] {self.__size}/{self.__height}"
 
 class Square(Rectangle):
     """
@@ -28,4 +75,4 @@ class Square(Rectangle):
         """
         Returns the description of the class
         """
-        return f"[Rectangle] {self.__size}/{self.__size}"
+        return f"[Square] {self.__size}/{self.__size}"
