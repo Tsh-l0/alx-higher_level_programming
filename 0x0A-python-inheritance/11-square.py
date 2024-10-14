@@ -27,6 +27,7 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError("{} must be greater than -".format(name))
 
+
 class Rectangle(BaseGeometry):
     """
     Class, Rectangle, inherited from BaseGeometry
@@ -51,6 +52,7 @@ class Rectangle(BaseGeometry):
         Description of class, rectangle
         """
         return f"[Rectangle] {self.__size}/{self.__height}"
+
 
 class Square(Rectangle):
     """
