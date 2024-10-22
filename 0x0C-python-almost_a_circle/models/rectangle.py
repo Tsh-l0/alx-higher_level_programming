@@ -96,3 +96,10 @@ class Rectangle(Base):
         Calculates and returns the area of a rectangle
         """
         return self.width * self.height
+
+    def display(self):
+        """
+        Prints the class, Rectangle using the character #
+        """
+        for ab in range(self.height):
+            print("#" * self.width)
