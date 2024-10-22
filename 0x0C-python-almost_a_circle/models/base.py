@@ -14,7 +14,7 @@ class Base:
             id: if id != None, assign the public instance attribute with
             value. if id == None __nb_objects++
         """
-        if id != None:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
