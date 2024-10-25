@@ -39,3 +39,24 @@ class Square(Rectangle):
                 f"[Square] ({self.id}) "
                 f"{self.x}/{self.y} - {self.width}"
                 )
+
+    def update(self, *args, **kwargs):
+        """
+        Assigns attributes to arguments
+
+        *args:
+            1st arg: id attribute
+            2ns arg: size attribute
+            3rd arg: x attribute
+            4th arg: y attribute
+        **kwargs:
+            key/value pairs representing attributes
+        """
+        if args:
+            attri = ["id", "size", "x", "y"]
+            for idx, val in enumerate(args):
+                if idx < len(attri):
+                    setattr(self, attri[idx], val)
+        else:
+            for key, val in kwargs.items():
+                setattr(self, key, val)
