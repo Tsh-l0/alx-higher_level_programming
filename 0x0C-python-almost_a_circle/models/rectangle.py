@@ -53,7 +53,7 @@ class Rectangle(Base):
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
-        self.__height = height
+        self.__height = value
 
     @property
     def x(self):
@@ -120,3 +120,17 @@ class Rectangle(Base):
                 f"{self.__x}/{self.__y} - "
                 f"{self.__width}/{self.height}"
                 )
+
+    def update(self, *args):
+        """
+        Assigns an argument to every attribute
+        1st arg: id attribute
+        2nd arg: width attribute
+        3rd arg: height attribute
+        4th arg: x atribute
+        5th arg: y attribute
+        """
+        attri = ["id", "width", "height", "x", "y"]
+        for idx, val in enumerate(args):
+            if idx < len(attri):
+                setattr(self, attri[idx], val)
