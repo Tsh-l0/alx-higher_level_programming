@@ -101,8 +101,14 @@ class Rectangle(Base):
         """
         Prints the class, Rectangle using the character #
         """
-        for ab in range(self.height):
-            print("#" * self.width)
+        for aa in range(self.y):
+            print("")
+        for row in range(self.__height):
+            for ac in range(self.x):
+                print(" ", end="")
+            for col in range(self.__width):
+                print("#", end="")
+            print()
 
     def __str__(self):
         """
