@@ -7,6 +7,12 @@ import os
 
 
 class Base:
+    """
+    Represents the base model
+
+    This is tge base classe for all classes in the project
+    Manages the id to avoid repeating the same code
+    """
 
     __nb_objects = 0
 
