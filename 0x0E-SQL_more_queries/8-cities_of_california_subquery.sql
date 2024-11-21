@@ -5,7 +5,7 @@
 USE hbtn_0d_usa;
 
 -- Without using the JOIN keyword to list all the cities of California
-SELECT cities.id, cities.name
+SELECT id, name
 FROM cities
 WHERE state_id = (SELECT id FROM states WHERE name = 'California')
-ORDER BY cities.id ASC;
+ORDER BY id;
