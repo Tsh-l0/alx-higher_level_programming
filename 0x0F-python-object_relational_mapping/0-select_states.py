@@ -1,17 +1,20 @@
 #!/usr/bin/python3
+"""
+Lists all the states from the database in ascending order
+"""
 import MySQLdb
 import sys
 
-if __name__ == "__main__":
-
-    # Get The 3 arguments
+def main():
+    """
+    A function to connect to the database and list states
+    """
     u_name = sys.argv[1]
-    u_password = sys.argv[2]
-    u_dbname = sys.argv[3]
+    u_passwd = sys.argv[2]
+    db_name = sys.argv[3]
 
-    # Connect to a MySQL server
     db = MySQLdb.connect(host="localhost", port=3306, user=u_name,
-                         passwd=u_password, db=u_dbname)
+                         passwd=u_passwd, db=db_name)
 
     # Create a cursor
     db_cursor = db.cursor()
@@ -22,10 +25,13 @@ if __name__ == "__main__":
     # Fetch all results
     states = db_cursor.fetchall()
 
-    # Use a loop to display results
+    # Use a loop to display states
     for state in states:
         print(state)
 
-    # Close the cursor and connection
+    # Close cursor and connection
     db_cursor.close()
     db.close()
+
+if __name__ == "__main__":
+    main()
