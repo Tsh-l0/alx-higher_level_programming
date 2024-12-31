@@ -5,6 +5,7 @@ Lists all the states from the database in ascending order
 import MySQLdb
 import sys
 
+
 def main():
     """
     A function to connect to the database and list states
@@ -32,6 +33,7 @@ def main():
     # Close cursor and connection
     db_cursor.close()
     db.close()
+
 
 if __name__ == "__main__":
     main()
